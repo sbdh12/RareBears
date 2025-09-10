@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RareBears Luxury Banners</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+    }
+
+    .banner-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .banner {
+      position: relative;
+      aspect-ratio: 1 / 1; /* makes banners perfectly square */
+      border-radius: 18px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .banner:hover img {
+      transform: scale(1.07);
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.35); /* lighter black veil */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    .overlay h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      margin: 0 0 0.4rem;
+      letter-spacing: 0.5px;
+    }
+
+    .overlay p {
+      font-family: 'Poppins', sans-serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1rem;
+      margin: 0;
+      opacity: 0.9;
+      max-width: 80%;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .banner-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .overlay h2 {
+        font-size: 1.4rem;
+      }
+
+      .overlay p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner-grid">
+    <div class="banner">
+      <img src="assets/products/diwali.jpg" alt="Diwali Teddy">
+      <div class="overlay">
+        <h2>Diwali 2025</h2>
+        <p>Illuminate your celebrations with golden elegance – a teddy crafted for the Festival of Lights.</p>
+      </div>
+    </div>
+
+    <div class="banner">
+      <img src="assets/products/halloween.jpg" alt="Halloween Teddy">
+      <div class="overlay">
+        <h2>Halloween 2025</h2>
+        <p>Where luxury meets mystery – a rare collectible for the night of enchantment.</p>
+      </div>
+    </div>
+
+    <div class="banner">
+      <img src="assets/products/christmas.jpg" alt="Christmas Teddy">
+      <div class="overlay">
+        <h2>Christmas 2025</h2>
+        <p>Wrapped in festive charm – a timeless teddy for your holiday memories.</p>
+      </div>
+    </div>
+
+    <div class="banner">
+      <img src="assets/products/newyear.jpg" alt="New Year Teddy">
+      <div class="overlay">
+        <h2>New Year 2026</h2>
+        <p>Step into the new year with a symbol of joy, crafted for fresh beginnings.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
